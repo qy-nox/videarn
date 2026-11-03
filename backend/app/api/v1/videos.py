@@ -172,5 +172,7 @@ async def view_batch(video_id, payload: ViewBatchRequest, user: User = Depends(c
     db.add(VideoView(user_id=user.id, video_id=video.id, view_date=datetime.now(timezone.utc),
                      watched_seconds=best.watched_seconds, watch_ratio=best.watch_ratio))
     await db.execute(update(VideoStats).where(VideoStats.video_id == video.id).values(views=VideoStats.views + 1))
+    from app.services.referrals import record_video_progress
+    await record_video_progress(db, user.id)
     await db.commit()
     return {"counted": True}

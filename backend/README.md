@@ -37,3 +37,18 @@ blocked creators, and non-published content:
 - `POST/DELETE /api/v1/videos/{id}/like`
 - `POST /api/v1/videos/{id}/comments`
 - `POST/DELETE /api/v1/users/{id}/follow`
+
+## Phase 3
+
+Wallet-changing requests use idempotency keys and write immutable coin ledger entries while
+locking wallet rows. Rewarded ads are credited only from the verified AdMob SSV callback;
+`transaction_id` is deduplicated. Daily caps, cooldowns, check-in streaks, referral
+qualification, withdrawal age/phone rules, encrypted payout details, fraud scoring, and a
+daily payout-budget pause are implemented.
+
+After pulling Phase 3:
+
+```bash
+alembic upgrade head
+python scripts/seed.py
+```
