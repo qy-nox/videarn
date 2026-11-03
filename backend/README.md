@@ -5,8 +5,14 @@ FastAPI API with SQLAlchemy 2, Alembic, PostgreSQL, Redis/Celery, Firebase ID-to
 Run locally:
 
 ```bash
-cp ../.env.example ../.env
+cd ..
+cp .env.example .env
+sed -i 's|@postgres:5432|@localhost:5432|' .env
 docker compose up -d postgres redis
+cd backend
+cp ../.env .env
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -e .
 alembic upgrade head
 python scripts/seed.py

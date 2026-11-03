@@ -7,10 +7,8 @@ Production-oriented short-video social app monorepo. Phase 1 provides the deploy
 ```bash
 cp .env.example .env
 docker compose up --build
-docker compose exec api alembic upgrade head
-docker compose exec api python scripts/seed.py
 ```
 
 API docs: http://localhost:8000/docs
 
-See `backend/README.md` for local backend commands. The `mobile/` and `admin/` directories are reserved for later phases.
+For local API execution, copy the root environment file into `backend/.env`, then run Alembic and the seed script from `backend/`. See `backend/README.md` for exact commands. The `mobile/` and `admin/` directories are reserved for later phases.
