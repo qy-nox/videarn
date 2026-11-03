@@ -52,3 +52,18 @@ After pulling Phase 3:
 alembic upgrade head
 python scripts/seed.py
 ```
+
+## Phase 4
+
+The admin API is available under `/api/v1/admin`, requires a short-lived admin JWT, and
+checks role permissions for every protected route. The React console provides dashboard,
+user/video moderation, reports, finance, ads, economy, fraud, content, settings, admin,
+audit, notifications, and support navigation surfaces.
+
+Run the console:
+
+```bash
+cd ../admin
+npm install
+VITE_API_URL=http://localhost:8000/api/v1 npm run dev
+```
