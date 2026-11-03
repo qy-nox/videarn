@@ -1,4 +1,4 @@
-# VidEarn Admin
+# ClipEarn Admin
 
 React + Vite + TypeScript operations console. It uses the RBAC-protected `/api/v1/admin`
 API and stores only the short-lived admin access token in browser local storage.

@@ -1,14 +1,26 @@
-# VidEarn
+# ClipEarn
 
-Production-oriented short-video social app monorepo. Phase 1 provides the deployable backend foundation, PostgreSQL schema, migrations, seed data, Firebase-to-JWT authentication, and admin RBAC boundary.
+ClipEarn is a production-oriented short-video social and rewards platform for Bangladesh and international expansion. It combines vertical video discovery, creator publishing, verified rewarded advertising, an auditable coin ledger, redemption workflows, and a role-protected operations console.
 
-## Phase 1
+## Current implementation
 
 ```bash
 cp .env.example .env
-docker compose up --build
+sudo docker compose up -d postgres redis
 ```
+
+The repository already contains the backend foundation, media pipeline, feed and engagement APIs, wallet/reward services, and admin console. These are being aligned to the ClipEarn specification incrementally rather than discarded.
 
 API docs: http://localhost:8000/docs
 
-For local API execution, copy the root environment file into `backend/.env`, then run Alembic and the seed script from `backend/`. See `backend/README.md` for exact commands. The `mobile/` and `admin/` directories are reserved for later phases.
+## Development roadmap
+
+1. Core foundation and authentication
+2. Media pipeline, feed, discovery, and search
+3. Social engagement, notifications, and moderation
+4. Wallet, verified rewards, missions, and referrals
+5. Redemptions, creator monetization, and finance
+6. Complete admin analytics, support, CMS, and settings
+7. Security, performance, deployment, and documentation
+
+See `backend/README.md` and `admin/README.md` for run instructions.

@@ -7,7 +7,7 @@ from app.db.session import SessionLocal
 from app.models import Video, VideoAsset, VideoStatus
 from app.services.storage import StorageService
 from app.core.config import get_settings
-celery_app=Celery("videarn",broker=get_settings().redis_url,backend=get_settings().redis_url)
+celery_app=Celery("clipearn",broker=get_settings().redis_url,backend=get_settings().redis_url)
 
 @celery_app.task(bind=True, autoretry_for=(Exception,), retry_backoff=True, max_retries=3)
 def transcode_video(self, video_id: str):

@@ -1,6 +1,6 @@
-# VidEarn Backend
+# ClipEarn Backend
 
-FastAPI API with SQLAlchemy 2, Alembic, PostgreSQL, Redis/Celery, Firebase ID-token verification, rotated JWT refresh sessions, and a base admin RBAC boundary.
+FastAPI API with SQLAlchemy 2, Alembic, PostgreSQL, Redis/Celery, Firebase ID-token verification, rotated JWT refresh sessions, auditable rewards, and a permission-checked admin API.
 
 Run locally:
 
