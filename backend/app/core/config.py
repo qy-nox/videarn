@@ -13,6 +13,13 @@ class Settings(BaseSettings):
     admin_email: str = "admin@example.com"
     admin_password: str = "change-me"
     admin_totp_secret: str | None = None
+    s3_endpoint_url: str | None = None
+    s3_region: str = "auto"
+    s3_bucket: str = "videarn"
+    s3_access_key_id: str | None = None
+    s3_secret_access_key: str | None = None
+    cdn_base_url: str | None = None
+    feed_page_size: int = 20
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
 @lru_cache
