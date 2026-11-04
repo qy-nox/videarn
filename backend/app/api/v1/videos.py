@@ -29,6 +29,7 @@ async def create_video(payload: VideoCreateRequest, user: User = Depends(current
     video = Video(creator_id=user.id, source_key=payload.source_key, duration_seconds=payload.duration_seconds,
                   caption=payload.caption, privacy=payload.privacy, status=VideoStatus.processing)
     db.add(video)
+    await db.flush()
     db.add(VideoStats(video_id=video.id))
     await db.commit()
     from app.worker import transcode_video

@@ -1,0 +1,20 @@
+{
+  "@@locale": "en",
+  "appName": "ClipEarn",
+  "home": "Home",
+  "explore": "Explore",
+  "earn": "Earn",
+  "wallet": "Wallet",
+  "profile": "Profile",
+  "forYou": "For You",
+  "following": "Following",
+  "search": "Search",
+  "create": "Create",
+  "comments": "Comments",
+  "signIn": "Sign in",
+  "email": "Email",
+  "password": "Password",
+  "retry": "Retry",
+  "noVideos": "No videos available yet.",
+  "uploadVideo": "Upload video"
+}

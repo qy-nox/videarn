@@ -24,3 +24,9 @@ API docs: http://localhost:8000/docs
 7. Security, performance, deployment, and documentation
 
 See `backend/README.md` and `admin/README.md` for run instructions.
+
+## Mobile client
+
+Phase 5 adds the Flutter client under `mobile/` with Firebase-ready authentication, connected
+feed and engagement flows, search, profile, wallet summary, localization, and presigned video
+uploads. See `mobile/README.md` for FlutterFire setup and run commands.
